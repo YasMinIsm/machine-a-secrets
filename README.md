@@ -33,4 +33,8 @@ Le projet se compose de trois fichiers :
 
 La sécurité d'Enigma reposait sur son nombre de combinaisons (environ 158 trillions). Sa complexité a mené à la création des premiers calculateurs électromécaniques par Alan Turing et son équipe à Bletchley Park.
 
+**Réalisé par :** Yasmin Ismayil
+**Formation :** MIAGE M2 - Université Paris Cité
+**Note :** Ce projet est réalisé dans un cadre pédagogique pour comprendre les bases de la cryptographie symétrique.
 Note : Ce projet est réalisé dans un cadre pédagogique pour comprendre les bases de la cryptographie symétrique.
+
