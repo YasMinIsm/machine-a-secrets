@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Enigma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="enigma-wrapper">
+        <div class="confidential-seal"> TOP SECRET</div>
+        
+        <header>
+            <h1>Enigma Cipher Console</h1>
+            <p> Rotor Machine Simulation</p>
+        </header>
+
+        <div class="mechanical-display">
+            <div id="rotor-L" class="drum">A</div>
+            <div id="rotor-M" class="drum">A</div>
+            <div id="rotor-R" class="drum">A</div>
+        </div>
+
+        <section class="settings-panel">
+            <h3>Machine Configuration</h3>
+            <div class="config-grid">
+                <div class="rotor-col">
+                    <label>Left Slot</label>
+                    <select class="rotor-type">
+                        <option value="I">Rotor I</option>
+                        <option value="II">Rotor II</option>
+                        <option value="III">III</option>
+                        <option value="IV">IV</option>
+                        <option value="V">V</option>
+                    </select>
+                    <input type="text" class="start-pos" id="start-0" maxlength="1" value="A">
+                    <div class="ring-setting">
+                        Ring: <input type="number" id="ring-0" min="1" max="26" value="1">
+                    </div>
+                </div>
+                
+                <div class="rotor-col">
+                    <label>Middle Slot</label>
+                    <select class="rotor-type"><option value="II" selected>Rotor II</option>
+                        <option value="I">I</option><option value="III">III</option>
+                        <option value="IV">IV</option><option value="V">V</option>
+                    </select>
+                    <input type="text" class="start-pos" id="start-1" maxlength="1" value="A">
+                    <div class="ring-setting">
+                        Ring: <input type="number" id="ring-1" min="1" max="26" value="1">
+                    </div>
+                </div>
+                
+                <div class="rotor-col">
+                    <label>Right Slot</label>
+                    <select class="rotor-type">
+                        <option value="III" selected>Rotor III</option>
+                        <option value="I">I</option>
+                        <option value="II">II</option>
+                        <option value="IV">IV</option>
+                        <option value="V">V</option>
+                    </select>
+                    <input type="text" class="start-pos" id="start-2" maxlength="1" value="A">
+                    <div class="ring-setting">
+                        Ring: <input type="number" id="ring-2" min="1" max="26" value="1">
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="plugboard-area">
+            <label>Plugboard Connections:</label>
+            <input type="text" id="plug-settings" placeholder="e.g. AB JK LM">
+        </section>
+
+        <section class="io-container">
+            <textarea id="raw-input" placeholder="Input message..."></textarea>
+            <div id="cipher-output" class="output-preview"></div>
+        </section>
+
+        <button onclick="resetAll()" id="reset-trigger">Reset Machine</button>
+    </div>
+    <script src="engine.js"></script>
+</body>
+</html>
